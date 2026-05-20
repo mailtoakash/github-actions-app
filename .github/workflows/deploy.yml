@@ -28,4 +28,6 @@ jobs:
 
             npm install
 
-            pm2 restart github-actions-app || pm2 start app.js --name github-action-app
+             pm2 delete github-actions-app || true
+
+             pm2 start app.js --name github-actions-app
